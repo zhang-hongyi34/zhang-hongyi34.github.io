@@ -1,0 +1,59 @@
+\doxysection{Scene.\+hpp}
+\hypertarget{_scene_8hpp_source}{}\label{_scene_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}GameEntity.hpp"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}ResourceManager.hpp"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scene}{Scene}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_scene_a59077235e5f30084f35a6ad7b91c4e82}{Scene}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_scene_aae99632f6bac1360a8c7463c9ab0f613}{Scene}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_scene}{Scene}}\&\ scene);\ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{struct_scene}{\string~Scene}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_ae98753ff24e7dfb41b45aa1d212c5e82}{StartUp}}(SDL\_Renderer*\ renderer);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_aea860520f1ae70e9af3e0fffa7357837}{Shutdown}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_ae0faba71fd397e2bea5849784ee3d2fe}{Input}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_a7e2bf79699b0c05bd353fade7b380ad7}{Update}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_a91913b921d41d374e00eac347358dc14}{Render}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_a1bc069ee7783c56d97c86e4dfcb8d695}{SetSceneActive}}(\textcolor{keywordtype}{bool}\ active);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_scene_a99313203ab62b1692065d9780e0cd067}{IsSceneActive}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_a21c16c55017ef5b71afc5477e8850b18}{AddGameEntity}}(std::shared\_ptr<GameEntity>\ entity);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ std::vector<std::shared\_ptr<GameEntity>>\ \mbox{\hyperlink{struct_scene_a4ef4240ba70328d702ffe4ccd167c6dd}{GetEntities}}()\ \{\ \textcolor{keywordflow}{return}\ entities;\}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_a4729010a91058e5015340c283580541a}{SetBackgroundColor}}(std::string\ color);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ SetBackgroundTexture(std::string\ filepath);}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ ClearBackgroundTexture();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_scene_a86948e3036657fac0719a1f3896feafa}{GetWidth}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mWidth;\ \}}
+\DoxyCodeLine{00110\ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_scene_af54777f0d89377720f7781bb6b47a91a}{GetHeight}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mHeight;\ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ SDL\_Renderer*\ GetRenderer()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mRenderer;\ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mWidth;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mHeight;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<GameEntity>>\ entities;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mIsSceneActive\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ SDL\_Renderer*\ mRenderer;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ std::shared\_ptr<SDL\_Texture>\ mBackgroundTexture;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ SDL\_Color\ mBackgroundColor\{0,\ 0,\ 0,\ SDL\_ALPHA\_OPAQUE\};}
+\DoxyCodeLine{00128\ \};}
+
+\end{DoxyCode}

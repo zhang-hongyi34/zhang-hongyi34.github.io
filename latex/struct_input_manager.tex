@@ -1,0 +1,65 @@
+\doxysection{Input\+Manager Struct Reference}
+\hypertarget{struct_input_manager}{}\label{struct_input_manager}\index{InputManager@{InputManager}}
+
+
+Singleton class that handles input.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_input_manager_af5638e587b34848dbdb982d8109666be}{Is\+Key\+Pressed}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Check if a key is pressed. Use SDL\+\_\+\+Scancode for key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_input_manager}{Input\+Manager}} \& \mbox{\hyperlink{struct_input_manager_ac42ba07e30b85a20b8ca1219960b944f}{Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the instance of the \doxylink{struct_input_manager}{Input\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class that handles input. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_input_manager_ac42ba07e30b85a20b8ca1219960b944f}\label{struct_input_manager_ac42ba07e30b85a20b8ca1219960b944f} 
+\index{InputManager@{InputManager}!Instance@{Instance}}
+\index{Instance@{Instance}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_input_manager}{Input\+Manager}} \& Input\+Manager\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the instance of the \doxylink{struct_input_manager}{Input\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_input_manager}{Input\+Manager}\& \doxylink{struct_input_manager}{Input\+Manager} instance 
+\end{DoxyReturn}
+\Hypertarget{struct_input_manager_af5638e587b34848dbdb982d8109666be}\label{struct_input_manager_af5638e587b34848dbdb982d8109666be} 
+\index{InputManager@{InputManager}!IsKeyPressed@{IsKeyPressed}}
+\index{IsKeyPressed@{IsKeyPressed}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{IsKeyPressed()}{IsKeyPressed()}}
+{\footnotesize\ttfamily bool Input\+Manager\+::\+Is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if a key is pressed. Use SDL\+\_\+\+Scancode for key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key is pressed 
+
+false if the key is not pressed 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Input\+Manager.\+hpp\end{DoxyCompactItemize}

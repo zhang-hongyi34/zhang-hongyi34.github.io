@@ -1,0 +1,349 @@
+\doxysection{Game\+Entity Struct Reference}
+\hypertarget{struct_game_entity}{}\label{struct_game_entity}\index{GameEntity@{GameEntity}}
+
+
+\doxylink{struct_game_entity}{Game\+Entity} class that represents an entity in the game.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Entity.\+hpp$>$}
+
+Inheritance diagram for Game\+Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_game_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_game_entity_a14e8dcb5d73d1943d20f87dd88e5575c}{Game\+Entity}} (const \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} \&entity)
+\begin{DoxyCompactList}\small\item\em Copy constructor to create a new entity from an existing one. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{struct_game_entity_a70d6264a9c67fb08a496f449b88b3b2d}{Input}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Handle input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{struct_game_entity_a791b3e11a19a0eb8ba294fda923f97a5}{Update}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{struct_game_entity_aeeb078574108d4285438e21c12403ab6}{Render}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\begin{DoxyCompactList}\small\item\em Render the entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{struct_game_entity_a2b717dec46adc9e32f90f5d0b721fa2d}{Add\+Component}} (std\+::shared\+\_\+ptr$<$ T $>$ component)
+\begin{DoxyCompactList}\small\item\em Add a component to the entity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_game_entity_a4db3fbfc448ceefa476f6c8a95f1326c}{Has\+Component}} (Component\+Type type)
+\begin{DoxyCompactList}\small\item\em Check if the entity has a component of a certain type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{struct_game_entity_a909d6f1466f185980ac418a76bc5f133}{Get\+Component}} (Component\+Type type)
+\begin{DoxyCompactList}\small\item\em Get a component of a certain type. \end{DoxyCompactList}\item 
+\Hypertarget{struct_game_entity_a4f8880ba308319029af46143a3afeb33}\label{struct_game_entity_a4f8880ba308319029af46143a3afeb33} 
+void {\bfseries Add\+Default\+Transform\+Component} ()
+\begin{DoxyCompactList}\small\item\em Add a default transform component to the entity. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_transform_component}{Transform\+Component}} $>$ \mbox{\hyperlink{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}{Get\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Get the transform component of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_game_entity_af70aeee767494295ab65288e7b2e85fa}{Set\+Renderable}} (bool value)
+\begin{DoxyCompactList}\small\item\em Set the renderable flag. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de}{Is\+Renderable}} () const
+\begin{DoxyCompactList}\small\item\em Check if the entity is renderable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55}{Intersects}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$ e)
+\begin{DoxyCompactList}\small\item\em Check if the entity intersects with another entity. Only checks for collision2D components. \end{DoxyCompactList}\item 
+\Hypertarget{struct_game_entity_a49fb466c56240b65128d9496948622ad}\label{struct_game_entity_a49fb466c56240b65128d9496948622ad} 
+void {\bfseries On\+Start} ()
+\begin{DoxyCompactList}\small\item\em Run when the entity is started. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_game_entity_a818662c5736d86c46a032c885b054c13}{Add\+Tag}} (std\+::string tag)
+\begin{DoxyCompactList}\small\item\em Add a tag to the entity for identification. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{struct_game_entity_aec87e56ea347a4e5b4167f6d69e97d82}{Get\+Tags}} () const
+\begin{DoxyCompactList}\small\item\em Get the tags of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_game_entity_ace976b39bf07414384ffff0cfeac1140}{Set\+On\+Start}} (std\+::function$<$ void()$>$ on\+Start)
+\begin{DoxyCompactList}\small\item\em Set the function to be called when the entity is started. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_game_entity_a62640e471c7cd12311b84d194b025add}{Set\+On\+Input}} (std\+::function$<$ void(float)$>$ on\+Input)
+\begin{DoxyCompactList}\small\item\em Set the function to be called when the entity receives input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_game_entity_a9fb9dd3663333d29857f3c3f3bccd655}{Set\+On\+Update}} (std\+::function$<$ void(float)$>$ on\+Update)
+\begin{DoxyCompactList}\small\item\em Set the function to be called when the entity is updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_game_entity_ab99b7602b52e74741183c45a38893d66}\label{struct_game_entity_ab99b7602b52e74741183c45a38893d66} 
+std\+::vector$<$ std\+::string $>$ {\bfseries m\+Tags}
+\item 
+\Hypertarget{struct_game_entity_a26bba98c4d0b3c0df5d02e0d91a9a9a1}\label{struct_game_entity_a26bba98c4d0b3c0df5d02e0d91a9a9a1} 
+std\+::map$<$ Component\+Type, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_component}{Component}} $>$ $>$ {\bfseries m\+Components}
+\item 
+\Hypertarget{struct_game_entity_a22d3bbec17b0b7ae485c40f925327ece}\label{struct_game_entity_a22d3bbec17b0b7ae485c40f925327ece} 
+bool {\bfseries m\+Renderable} \{true\}
+\item 
+\Hypertarget{struct_game_entity_a560d457e4f82e27cab91d8fe8c41d058}\label{struct_game_entity_a560d457e4f82e27cab91d8fe8c41d058} 
+std\+::function$<$ void()$>$ {\bfseries m\+On\+Start} = nullptr
+\item 
+\Hypertarget{struct_game_entity_a6b775c4e6253b9ccc1e5f2de6974439e}\label{struct_game_entity_a6b775c4e6253b9ccc1e5f2de6974439e} 
+std\+::function$<$ void(float)$>$ {\bfseries m\+On\+Input} = nullptr
+\item 
+\Hypertarget{struct_game_entity_ab34c328e6ae0242bf5174f13e74a890b}\label{struct_game_entity_ab34c328e6ae0242bf5174f13e74a890b} 
+std\+::function$<$ void(float)$>$ {\bfseries m\+On\+Update} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_game_entity}{Game\+Entity} class that represents an entity in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_game_entity_a14e8dcb5d73d1943d20f87dd88e5575c}\label{struct_game_entity_a14e8dcb5d73d1943d20f87dd88e5575c} 
+\index{GameEntity@{GameEntity}!GameEntity@{GameEntity}}
+\index{GameEntity@{GameEntity}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GameEntity()}{GameEntity()}}
+{\footnotesize\ttfamily Game\+Entity\+::\+Game\+Entity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} \&}]{entity }\end{DoxyParamCaption})}
+
+
+
+Copy constructor to create a new entity from an existing one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_game_entity_a2b717dec46adc9e32f90f5d0b721fa2d}\label{struct_game_entity_a2b717dec46adc9e32f90f5d0b721fa2d} 
+\index{GameEntity@{GameEntity}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Game\+Entity\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ T $>$}]{component }\end{DoxyParamCaption})}
+
+
+
+Add a component to the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & \doxylink{struct_component}{Component} to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_game_entity_a818662c5736d86c46a032c885b054c13}\label{struct_game_entity_a818662c5736d86c46a032c885b054c13} 
+\index{GameEntity@{GameEntity}!AddTag@{AddTag}}
+\index{AddTag@{AddTag}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{AddTag()}{AddTag()}}
+{\footnotesize\ttfamily void Game\+Entity\+::\+Add\+Tag (\begin{DoxyParamCaption}\item[{std\+::string}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a tag to the entity for identification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & Tag to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_game_entity_a909d6f1466f185980ac418a76bc5f133}\label{struct_game_entity_a909d6f1466f185980ac418a76bc5f133} 
+\index{GameEntity@{GameEntity}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Game\+Entity\+::\+Get\+Component (\begin{DoxyParamCaption}\item[{Component\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Get a component of a certain type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the component \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \doxylink{struct_component}{Component} type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+T$>$ 
+\end{DoxyReturn}
+\Hypertarget{struct_game_entity_aec87e56ea347a4e5b4167f6d69e97d82}\label{struct_game_entity_aec87e56ea347a4e5b4167f6d69e97d82} 
+\index{GameEntity@{GameEntity}!GetTags@{GetTags}}
+\index{GetTags@{GetTags}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GetTags()}{GetTags()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Game\+Entity\+::\+Get\+Tags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the tags of the entity. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$ Tags 
+\end{DoxyReturn}
+\Hypertarget{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397}\label{struct_game_entity_a6eb050e651a68dd7fe17ad85f0066397} 
+\index{GameEntity@{GameEntity}!GetTransform@{GetTransform}}
+\index{GetTransform@{GetTransform}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{GetTransform()}{GetTransform()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_transform_component}{Transform\+Component}} $>$ Game\+Entity\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the transform component of the entity. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Transform\+Component$>$ Transform component 
+\end{DoxyReturn}
+\Hypertarget{struct_game_entity_a4db3fbfc448ceefa476f6c8a95f1326c}\label{struct_game_entity_a4db3fbfc448ceefa476f6c8a95f1326c} 
+\index{GameEntity@{GameEntity}!HasComponent@{HasComponent}}
+\index{HasComponent@{HasComponent}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{HasComponent()}{HasComponent()}}
+{\footnotesize\ttfamily bool Game\+Entity\+::\+Has\+Component (\begin{DoxyParamCaption}\item[{Component\+Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Check if the entity has a component of a certain type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \doxylink{struct_component}{Component} type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\Hypertarget{struct_game_entity_a70d6264a9c67fb08a496f449b88b3b2d}\label{struct_game_entity_a70d6264a9c67fb08a496f449b88b3b2d} 
+\index{GameEntity@{GameEntity}!Input@{Input}}
+\index{Input@{Input}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily virtual void Game\+Entity\+::\+Input (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handle input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Time since last frame \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55}\label{struct_game_entity_af38de031054957f3a8787ac2ed4b1d55} 
+\index{GameEntity@{GameEntity}!Intersects@{Intersects}}
+\index{Intersects@{Intersects}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{Intersects()}{Intersects()}}
+{\footnotesize\ttfamily bool Game\+Entity\+::\+Intersects (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_entity}{Game\+Entity}} $>$}]{e }\end{DoxyParamCaption})}
+
+
+
+Check if the entity intersects with another entity. Only checks for collision2D components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if intersects 
+
+false if does not intersect 
+\end{DoxyReturn}
+\Hypertarget{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de}\label{struct_game_entity_aaa8c950dc85696d1902a497cc00d72de} 
+\index{GameEntity@{GameEntity}!IsRenderable@{IsRenderable}}
+\index{IsRenderable@{IsRenderable}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{IsRenderable()}{IsRenderable()}}
+{\footnotesize\ttfamily bool Game\+Entity\+::\+Is\+Renderable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the entity is renderable. 
+
+\begin{DoxyReturn}{Returns}
+true if renderable 
+
+false if not renderable 
+\end{DoxyReturn}
+\Hypertarget{struct_game_entity_aeeb078574108d4285438e21c12403ab6}\label{struct_game_entity_aeeb078574108d4285438e21c12403ab6} 
+\index{GameEntity@{GameEntity}!Render@{Render}}
+\index{Render@{Render}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily virtual void Game\+Entity\+::\+Render (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Render the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & SDL renderer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_game_entity_a62640e471c7cd12311b84d194b025add}\label{struct_game_entity_a62640e471c7cd12311b84d194b025add} 
+\index{GameEntity@{GameEntity}!SetOnInput@{SetOnInput}}
+\index{SetOnInput@{SetOnInput}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{SetOnInput()}{SetOnInput()}}
+{\footnotesize\ttfamily void Game\+Entity\+::\+Set\+On\+Input (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(float)$>$}]{on\+Input }\end{DoxyParamCaption})}
+
+
+
+Set the function to be called when the entity receives input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Input} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_game_entity_ace976b39bf07414384ffff0cfeac1140}\label{struct_game_entity_ace976b39bf07414384ffff0cfeac1140} 
+\index{GameEntity@{GameEntity}!SetOnStart@{SetOnStart}}
+\index{SetOnStart@{SetOnStart}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{SetOnStart()}{SetOnStart()}}
+{\footnotesize\ttfamily void Game\+Entity\+::\+Set\+On\+Start (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{on\+Start }\end{DoxyParamCaption})}
+
+
+
+Set the function to be called when the entity is started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Start} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_game_entity_a9fb9dd3663333d29857f3c3f3bccd655}\label{struct_game_entity_a9fb9dd3663333d29857f3c3f3bccd655} 
+\index{GameEntity@{GameEntity}!SetOnUpdate@{SetOnUpdate}}
+\index{SetOnUpdate@{SetOnUpdate}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{SetOnUpdate()}{SetOnUpdate()}}
+{\footnotesize\ttfamily void Game\+Entity\+::\+Set\+On\+Update (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(float)$>$}]{on\+Update }\end{DoxyParamCaption})}
+
+
+
+Set the function to be called when the entity is updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Update} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_game_entity_af70aeee767494295ab65288e7b2e85fa}\label{struct_game_entity_af70aeee767494295ab65288e7b2e85fa} 
+\index{GameEntity@{GameEntity}!SetRenderable@{SetRenderable}}
+\index{SetRenderable@{SetRenderable}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{SetRenderable()}{SetRenderable()}}
+{\footnotesize\ttfamily void Game\+Entity\+::\+Set\+Renderable (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the renderable flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to set \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_game_entity_a791b3e11a19a0eb8ba294fda923f97a5}\label{struct_game_entity_a791b3e11a19a0eb8ba294fda923f97a5} 
+\index{GameEntity@{GameEntity}!Update@{Update}}
+\index{Update@{Update}!GameEntity@{GameEntity}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void Game\+Entity\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Update the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Time since last frame \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Entity.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\doxysection{Scene\+Manager.\+hpp}
+\hypertarget{_scene_manager_8hpp_source}{}\label{_scene_manager_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Scene.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Application.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_scene_manager}{SceneManager}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_scene_manager}{SceneManager}}\&\ \mbox{\hyperlink{struct_scene_manager_a2c16c811641825fa41e28cd7aab197d0}{Instance}}()\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{nullptr}\ ==\ mInstance)\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ mInstance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_scene_manager}{SceneManager}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *mInstance;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_scene_manager_acba073c9fa5cbfdac6db16698ab45dd5}{SetCurrentScene}}(std::shared\_ptr<Scene>\ scene)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ mCurrentScene\ =\ scene;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<Scene>\ \mbox{\hyperlink{struct_scene_manager_a2f2dd7a1505af27c7962711c40d832a4}{GetCurrentScene}}()\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mCurrentScene;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_scene_manager}{SceneManager}}()\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::shared\_ptr<Scene>\ mCurrentScene;\ \textcolor{comment}{//\ Stores\ a\ pointer\ to\ the\ current\ scene}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_scene_manager}{SceneManager}}*\ mInstance\ \{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00051\ \};}
+
+\end{DoxyCode}
